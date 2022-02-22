@@ -3,6 +3,7 @@ import numpy as np
 import numpy.linalg as LA
 import matplotlib.pyplot as plt
 
+print("May take a few minutes to run ......")
 image1 = np.asarray(imageio.imread("data/image1.png"))
 image2 = np.asarray(imageio.imread("data/image2.png"))
 image1 = image1.flatten().astype(np.float64)
@@ -79,7 +80,12 @@ for m in range(sample_num):
 y1 = np.array(y1).reshape((512, 512))
 y2 = np.array(y2).reshape((512, 512))
 
-plt.imshow(y1, cmap="gray")
-plt.imshow(y2, cmap="gray")
+# plt.imshow(y1, cmap="gray")
+# plt.imshow(y2, cmap="gray")
+
+plt.figure()
+f, axarr = plt.subplots(2,1)
+axarr[0].imshow(y1, cmap="gray")
+axarr[1].imshow(y2, cmap="gray")
 
 plt.show()
