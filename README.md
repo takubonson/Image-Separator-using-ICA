@@ -1,4 +1,8 @@
 # Image-Separator-using-ICA
+## How to run
+```
+python image_separator.py
+```
 ## Demo
 Input<br/>
 ![](./data/image1.png)
